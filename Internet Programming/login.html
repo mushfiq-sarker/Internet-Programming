@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login</title>
+  <link rel="icon" href="Erased Bg 1.svg" type="image/svg+xml" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Saira+Stencil+One&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    /* General Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+    }
+    body {
+      background-color: #f0f4f8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .login-container {
+      background: white;
+      border-radius: 20px;
+      display: flex;
+      flex-wrap: nowrap; /* keep side by side */
+      max-width: 900px;
+      width: 100%;
+      height: 600px; /* fixed height for consistent container size */
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      align-items: center;    /* vertical centering */
+      justify-content: center; /* horizontal centering */
+    }
+    .left-section,
+    .right-section {
+      height: 100%;            /* fill container height */
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* vertical centering */
+      align-items: center;     /* horizontal centering */
+      padding: 30px;
+    }
+    .left-section {
+      flex: 1 1 40%;
+      background-color: #000842;
+    }
+    .left-section img {
+      width: 100%;
+      max-width: 250px;
+      height: auto;
+      object-fit: contain;
+    }
+    .right-section {
+      flex: 1 1 60%;
+      position: relative;
+      background: white;
+    }
+    .right-section .brand-name {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-family: "Saira Stencil One", sans-serif;
+      font-size: 22px;
+      background: linear-gradient(to right, #050728, #12178e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .google-icon-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .google-icon-container img {
+      width: 60px;
+      height: 60px;
+    }
+    /* Form Styles */
+    form {
+      width: 100%;
+      max-width: 320px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+    }
+    .input-group {
+      margin-bottom: 15px;
+      width: 100%;
+    }
+    .input-group label {
+      display: none;
+    }
+    .input-group input {
+      width: 100%;
+      height: 45px;
+      padding: 12px;
+      border: 1px solid #aab4d4;
+      background-color: #645fb7;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #fff;
+    }
+    .input-group input::placeholder {
+      color: #e0e0f5;
+    }
+    .forgot-password {
+      width: 100%;
+      margin-top: -10px;
+      margin-bottom: 15px;
+      text-align: right;
+      max-width: 320px;
+    }
+    .forgot-password a {
+      font-size: 12px;
+      color: #e63946; /* red */
+      text-decoration: none;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    .forgot-password a:hover,
+    .forgot-password a:focus {
+      color: #a02832;
+      outline: none;
+    }
+    .btn {
+      width: 100%;
+      max-width: 320px;
+      background-color: #4f46e5;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      margin-top: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #3730a3;
+    }
+    .divider {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      max-width: 320px;
+      margin: 20px 0;
+    }
+    .divider::before,
+    .divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #ccc;
+    }
+    .divider span {
+      margin: 0 10px;
+      color: #666;
+      font-size: 12px;
+    }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
+      width: 100%;
+      max-width: 320px;
+    }
+    .social-icons img {
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .social-icons img:hover {
+      transform: scale(1.1);
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .login-container {
+        flex-direction: column;
+        height: auto; /* allow height to adjust */
+        max-width: 400px;
+      }
+      .left-section,
+      .right-section {
+        flex: none;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+      }
+      .right-section .brand-name {
+        position: static;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+    }
+    @media (max-width: 480px) {
+      .right-section {
+        padding: 15px;
+      }
+      .brand-name {
+        font-size: 20px;
+      }
+      .google-icon-container img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="left-section">
+      <img src="Saly-10.svg" alt="Illustration" />
+    </div>
+    <div class="right-section">
+      <div class="brand-name">StudyStream</div>
+      <div class="google-icon-container">
+        <img src="Erased Bg 1.svg" alt="StudyStream Icon" />
+      </div>
+      <form>
+        <div class="input-group">
+          <input type="email" id="email" placeholder="Enter Email" required />
+        </div>
+        <div class="input-group">
+          <input type="password" id="password" placeholder="Password" required />
+        </div>
+        <div class="forgot-password">
+          <a href="forgot_password.html" tabindex="0">Forgot password?</a>
+        </div>
+        <button type="submit" class="btn">Login</button>
+      </form>
+      <div class="divider"><span>or continue with</span></div>
+      <div class="social-icons">
+        <img src="Group 13.svg" alt="Google Icon" />
+      </div>
+    </div>
+  </div>
+</body>
+</html>

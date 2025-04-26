@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Era Of Learning</title>
+  <link rel="icon" href="Erased Bg 1.svg" type="image/svg+xml">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #130353, #10011b);
+      color: white; /* Default text color */
+    }
+    nav.navbar {
+      /* position: fixed; */
+      top: 0;
+      width: 100%;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 30px;
+      box-sizing: border-box;
+      background: transparent;
+      z-index: 100;
+    }
+    nav.navbar .top-left-icon img {
+      width: 110px;
+      height: 75px;
+    }
+    nav.navbar .classroom-link {
+      font-size: 15.9px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 auto;
+    }
+    nav.navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+    }
+    nav.navbar ul li a {
+      font-size: 13.9px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+    }
+    .hero-section {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      height: 100vh;
+      background-image: url('saly-10.svg');
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: 40%;
+      padding-bottom: 100px;
+      margin-top: -110px; /* account for fixed navbar */
+    }
+    .hero-content {
+      width: 100%;
+      max-width: 800px;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .hero-content p {
+      font-size: 18px;
+      margin: 10px auto;
+      color: white;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+      line-height: 1.5;
+    }
+    section {
+      text-align: center;
+      padding: 80px 20px;
+      position: relative;
+    }
+    section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: white;
+    }
+    section p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: 0 auto 20px;
+      color: white;
+    }
+    .placement-buttons {
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+    .btn {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .btn-secondary {
+      background-color: #6c757d;
+      color: white;
+    }
+    .section-image {
+      max-width: 100%;
+      margin-top: 20px;
+    }
+    .newsletter form {
+      margin-top: 20px;
+    }
+    .newsletter input[type="email"] {
+      padding: 10px;
+      width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .newsletter button {
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: #f1f1f1;
+      font-size: 14px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="top-left-icon"><img src="Erased Bg 1.svg" alt="Icon"></div>
+    <a href="#classroom" class="classroom-link">📖 Classroom</a>
+    <ul>
+      <li><a href="#login">Log in</a></li>
+      <li><a href="#signup">Sign Up</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero-section">
+    <div class="hero-content">
+      <p>Where teaching and learning come together.</p>
+      <p>Empower educators and learners with seamless collaboration through doubt clearing, task management, and resource sharing. Teachers can effortlessly create virtual classrooms and conduct live classes. Our user-friendly interface and robust security measures ensure a smooth experience.</p>
+    </div>
+  </div>
+
+  <section class="placement">
+    <div class="placement-buttons">
+      <a href="#join" class="btn">Join</a>
+      <a href="#create" class="btn-secondary">Create</a>
+    </div>
+    <h2>Placement Drive</h2>
+    <p>Learners around the world are launching new careers, advancing in their fields, and enriching their lives.</p>
+    <p>Instructors from around the world teach millions of students on Byway. We provide the tools and skills to teach what you love.</p>
+    <p>Get job updates and openings through this page, and apply easily.</p>
+    <img src="image.svg" alt="Placement Drive Image" class="section-image">
+  </section>
+
+  <section class="todo-timer"><h2>ToDo & Timer</h2><p>Utilize the to-do list and timer for maximum productivity and efficient task management.</p></section>
+  <section class="discussion"><h2>Discussion Section</h2><p>Ask your doubts and thoughts. Anyone can ask and answer questions to clear doubts.</p></section>
+  <section class="upcoming"><h2>Upcoming Features</h2><p>Productivity features are currently under development.</p></section>
+  <section class="famous-schools"><h2>Famous Schools Using Our Tool</h2><img src="image1.svg" alt="Famous Schools Image" class="section-image"></section>
+  <section class="newsletter"><h2>Subscribe to Our Newsletter</h2><form action="#"><input type="email" placeholder="Your email" required><button type="submit">Subscribe</button></form></section>
+
+  <footer class="footer">
+    <p>&copy; 2024 [Your Project Name]. All rights reserved.</p>
+  </footer>
+</body>
+</html>
